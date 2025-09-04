@@ -85,3 +85,103 @@ nav a {
     border: none;
     border-radius: 35px;
 }
+
+#about {
+    padding: 7rem 2rem;
+}
+
+#about h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    color: #1e293b;
+    padding-bottom: 6rem;
+}
+
+#about h1::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    bottom: -200px;
+    border-radius: 5px;
+}
+
+#about .container {
+    display: flex;
+    gap: 4rem;
+}
+
+.container-about h3 {
+    font-size: 2rem;
+    color: #1e293b;
+    padding-bottom: 2rem;
+}
+
+.container-about p {
+    color: #64748b;
+    font-size: 1.3rem;
+}
+
+.about-img {
+    height: 320px;
+    width: 320px;
+}
+
+#skills {
+    background-color: #1e293b;
+    color: white;
+}
+
+#skills .container {
+    display: grid;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3.5rem;
+    padding-bottom: 6rem;
+    /* Need to make the padding in non retarded way */
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skills-card {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.skills-icon {
+    font-size: 3rem;
+}
+
+#skills h4 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+#skills .top-line-piece {
+    padding-top: 12rem;
+
+}
+
+#skills .top-line-piece::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    border-radius: 5px;
+
+}
