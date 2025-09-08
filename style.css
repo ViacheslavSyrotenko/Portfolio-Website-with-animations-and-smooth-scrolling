@@ -5,6 +5,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
 }
 
 /* Nav Section */
@@ -39,9 +40,30 @@ nav ul {
 }
 nav a {
     color: white;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.3s ease;
     
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+nav a::after {
+    content: '';
+    bottom: -5px;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
@@ -76,6 +98,7 @@ nav a {
     color: white;
     font-size: 1rem;
     font-weight:600;
+    
 }
 
 .hero button {
@@ -84,6 +107,13 @@ nav a {
     margin-top: 2rem;
     border: none;
     border-radius: 35px;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    box-shadow: 0 13px 35px rgba(59, 130, 246, 0.4);
+
 }
 
 #about {
@@ -206,7 +236,6 @@ nav a {
 }
 
 .project-card {
-    border: 1px solid #000;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -298,4 +327,76 @@ nav a {
     height: 4px;
     background: linear-gradient(90deg, #3b82f6, #9333ea);
     border-radius: 5px;
+}
+
+/* Contact Section  */
+
+#contact {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    padding: 7rem 0rem;
+}
+
+#contact .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 2rem 2rem 2rem;
+}
+
+.contact-top {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-top::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #9333ea);
+    border-radius: 5px;
+}
+
+#contact p {
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+#contact button {
+    border: none;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-buttons {
+    display: inherit;
+    gap: 2rem;
+}
+
+.contact-buttons a {
+    text-decoration: none;
+    color: white;
+    background: none;
+    font-size: 1rem;
+}
+
+/* Footer  */
+
+footer {
+    background: #0f172a;
+}
+
+footer p {
+    color: white;
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: center;
 }
